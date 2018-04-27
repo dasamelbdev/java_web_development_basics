@@ -9,10 +9,10 @@
 The code has some comments which will help you understand each of those lines. But we'll explain here in more detail what the code does. As a first step in the client code, we'll do a lookup of the EJB using a JNDI name. In AS7, for remote access to EJBs, you use the ejb: namespace with the following syntax:
 
 For stateless beans:
-ejb:<app-name>/<module-name>/<distinct-name>/<bean-name>!<fully-qualified-classname-of-the-remote-interface>
+ejb:app-name/module-name/distinct-name/bean-name!fully-qualified-classname-of-the-remote-interface
 
 For stateful beans:
-ejb:<app-name>/<module-name>/<distinct-name>/<bean-name>!<fully-qualified-classname-of-the-remote-interface>?stateful
+ejb:app-name/module-name/distinct-name/bean-name!fully-qualified-classname-of-the-remote-interface>stateful
 
 The ejb: namespace identifies it as a EJB lookup and is a constant (i.e. doesn't change) for doing EJB lookups. The rest of the parts in the jndi name are as follows:
 app-name : This is the name of the .ear (without the .ear suffix) that you have deployed on the server and contains your EJBs.
